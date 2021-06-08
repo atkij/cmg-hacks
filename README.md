@@ -1,2 +1,2 @@
-# cmg-hacks
-Some utilities extend cool math games and enable a few paid features.
+# Coolmath Games Hacks
+Please visit https://j-a-13.github.io/cmg-hacks/ for more information.
