@@ -31,6 +31,16 @@ function replaceFullScreenBtn () {
   oldElement.parentNode.replaceChild(newElement, oldElement);
 }
 
+function removePrerollAndDisplayGame () {
+
+  let oldElement = document.getElementsByClassName("continue-lnk-container-rsection")[0];
+  let newElement = oldElement.cloneNode(true);
+  
+  newElement.innerHTML = '<div id="continue-link-modded"></div><div id="timer_div-modded" style="margin-left:5px;"><a href="javascript:cmg_remove_padg();"><div class="continue-link-yellow">Continue to Game ▶</div></a></div>';
+  oldElement.parentNode.replaceChild(newElement, oldElement);
+  
+}
+ 
 function init () {
   //create a fullscreen link element
   replaceFullScreenBtn();
