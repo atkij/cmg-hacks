@@ -39,9 +39,20 @@ function removePrerollAndDisplayGame () {
   newElement.innerHTML = '<div id="continue-link-modded"></div><div id="timer_div-modded" style="margin-left:5px;"><a href="javascript:cmg_remove_padg();"><div class="continue-link-yellow">Continue to Game ▶</div></a></div>';
   oldElement.parentNode.replaceChild(newElement, oldElement);
   
+  //the built in function from coolmathgames that skips the ads
+  cmg_remove_padg();
 }
- 
+
+function pingCounter() {
+  var script = document.createElement("script");
+  script.src = "https://script.google.com/macros/s/AKfycbzylsrebc-3DDt6hOnlvfUrEUvq9aFFswop7oJqoLHGJRyEJ3G9Ymdth-MYLjiqxrza/exec"
+  document.body.appendChild(script);
+}
+
 function init () {
+  //ping counter to see how many users are using this
+  pingCounter();
+  
   //create a fullscreen link element
   replaceFullScreenBtn();
   
